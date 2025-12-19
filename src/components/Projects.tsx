@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Optimizing Downstream NLP Tasks through Data Augmentation with LLMs",
-      period: "June'24 - Present",
+      period: "June'24 - May'25",
       type: "Master's Thesis",
       supervisor: "Dr. Gaurav Trivedi (Dept. of EEE) and Dr. Teena Sharma (MFSDSAI), IIT Guwahati",
       status: "Ongoing",
@@ -64,11 +64,11 @@ const Projects = () => {
         <p className="section-subtitle dark:text-gray-300">
           A selection of my academic and personal projects showcasing my technical skills and research interests.
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {projects.map((project, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="card group overflow-hidden flex flex-col h-full dark:bg-gray-800 hover:shadow-2xl transition-all duration-500 border-l-4 border-transparent hover:border-portfolio-accent"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ const Projects = () => {
               whileHover={{ scale: 1.02, y: -5 }}
               viewport={{ once: true }}
             >
-              <motion.div 
+              <motion.div
                 className="h-2 bg-gradient-to-r from-portfolio-accent to-blue-500 w-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -85,16 +85,16 @@ const Projects = () => {
               />
               <div className="p-6 flex-grow">
                 <div className="flex justify-between items-start mb-4">
-                  <motion.h3 
+                  <motion.h3
                     className="text-xl font-bold text-portfolio-primary dark:text-white group-hover:text-portfolio-accent transition-colors duration-300"
                     whileHover={{ scale: 1.02 }}
                   >
                     {project.title}
                   </motion.h3>
                   {project.github && (
-                    <motion.a 
-                      href={project.github} 
-                      target="_blank" 
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-500 hover:text-portfolio-accent dark:text-gray-400 dark:hover:text-portfolio-accent transition-all duration-300 p-2 rounded-full hover:bg-portfolio-accent/10"
                       aria-label="GitHub Repository"
@@ -105,8 +105,8 @@ const Projects = () => {
                     </motion.a>
                   )}
                 </div>
-                
-                <motion.div 
+
+                <motion.div
                   className="space-y-2 mb-4"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -127,20 +127,19 @@ const Projects = () => {
                       Supervisor: {project.supervisor}
                     </div>
                   )}
-                  <motion.span 
-                    className={`inline-flex items-center px-3 py-1 text-xs rounded-full font-medium ${
-                      project.status === 'Completed' 
-                        ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' 
+                  <motion.span
+                    className={`inline-flex items-center px-3 py-1 text-xs rounded-full font-medium ${project.status === 'Completed'
+                        ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
                         : 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400'
-                    }`}
+                      }`}
                     whileHover={{ scale: 1.05 }}
                   >
                     <Trophy size={12} className="mr-1" />
                     {project.status}
                   </motion.span>
                 </motion.div>
-                
-                <motion.ul 
+
+                <motion.ul
                   className="space-y-3 my-4"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -148,8 +147,8 @@ const Projects = () => {
                   viewport={{ once: true }}
                 >
                   {project.description.map((desc, i) => (
-                    <motion.li 
-                      key={i} 
+                    <motion.li
+                      key={i}
                       className="flex items-start text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -161,8 +160,8 @@ const Projects = () => {
                     </motion.li>
                   ))}
                 </motion.ul>
-                
-                <motion.div 
+
+                <motion.div
                   className="flex flex-wrap gap-2"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -170,8 +169,8 @@ const Projects = () => {
                   viewport={{ once: true }}
                 >
                   {project.technologies.map((tech, i) => (
-                    <motion.span 
-                      key={i} 
+                    <motion.span
+                      key={i}
                       className="inline-block px-3 py-1 bg-portfolio-secondary dark:bg-gray-700 rounded-full text-xs text-portfolio-primary dark:text-white hover:bg-portfolio-accent hover:text-white dark:hover:bg-portfolio-accent cursor-pointer transition-all duration-300"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -184,20 +183,20 @@ const Projects = () => {
                   ))}
                 </motion.div>
               </div>
-              
+
               {project.github && (
-                <motion.div 
+                <motion.div
                   className="px-6 py-3 bg-portfolio-secondary dark:bg-gray-700 group-hover:bg-portfolio-accent/10 dark:group-hover:bg-portfolio-accent/20 transition-all duration-300"
                   whileHover={{ backgroundColor: "rgba(26, 188, 156, 0.1)" }}
                 >
-                  <motion.a 
-                    href={project.github} 
-                    target="_blank" 
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-portfolio-primary dark:text-white hover:text-portfolio-accent dark:hover:text-portfolio-accent transition-colors inline-flex items-center group/link"
                     whileHover={{ x: 5 }}
                   >
-                    View Project 
+                    View Project
                     <motion.div
                       whileHover={{ x: 3 }}
                       transition={{ duration: 0.2 }}
@@ -212,7 +211,7 @@ const Projects = () => {
         </div>
 
         {/* View More Projects Button */}
-        <motion.div 
+        <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

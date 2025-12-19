@@ -8,7 +8,7 @@ const RadarChart = lazy(() => import('./charts/RadarChart'));
 const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const [entry] = entries;
@@ -17,18 +17,18 @@ const Skills = () => {
         observer.unobserve(entry.target);
       }
     }, { threshold: 0.1 });
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-  
+
   const technicalSkills = [
     { name: "Python", level: 95 },
     { name: "Machine Learning", level: 90 },
@@ -41,15 +41,13 @@ const Skills = () => {
     { name: "MATLAB", level: 60 },
     { name: "R", level: 55 },
   ];
-  
+
   const frameworks = [
-    "NumPy", "Pandas", "Scikit-learn", "PyTorch", "Keras", 
-    "YOLO", "LangChain", "Docker", "MySQL"
+    "NumPy", "Pandas", "Scikit-learn", "PyTorch", "LangChain", "Docker", "MySQL", "MLFlow", "KubeFlow", "Git", "Databricks", "PySpark", "Langgraph", "HuggingFace"
   ];
-  
+
   const softSkills = [
-    "Leadership", "Team Management", "Problem Solving", 
-    "Research", "Communication", "Time Management"
+    "Leadership", "Team Management", "Problem Solving", "Research", "Communication", "Time Management"
   ];
 
   // Data for radar chart
@@ -76,7 +74,7 @@ const Skills = () => {
         <p className="section-subtitle dark:text-gray-300">
           A comprehensive overview of my technical expertise and professional competencies.
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -88,10 +86,10 @@ const Skills = () => {
               <Code className="mr-3 text-portfolio-accent" size={24} />
               Technical Skills
             </h3>
-            
+
             <div className="space-y-6">
               {technicalSkills.map((skill, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +99,7 @@ const Skills = () => {
                 >
                   <div className="flex justify-between mb-2">
                     <span className="font-medium dark:text-gray-200 group-hover:text-portfolio-accent dark:group-hover:text-portfolio-accent transition-colors">{skill.name}</span>
-                    <motion.span 
+                    <motion.span
                       className="text-portfolio-accent dark:text-blue-400 font-bold"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -112,7 +110,7 @@ const Skills = () => {
                     </motion.span>
                   </div>
                   <div className="skill-bar dark:bg-gray-700 relative overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       className="skill-progress dark:bg-blue-500 relative"
                       initial={{ width: '0%' }}
                       whileInView={{ width: `${skill.level}%` }}
@@ -130,15 +128,15 @@ const Skills = () => {
               ))}
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-col"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <motion.div 
+            <motion.div
               className="card p-6 dark:bg-gray-700 group hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               initial={{ opacity: 0, y: 20 }}
@@ -153,7 +151,7 @@ const Skills = () => {
               <div className="h-64 w-full">
                 {isVisible && (
                   <Suspense fallback={
-                    <motion.div 
+                    <motion.div
                       className="flex items-center justify-center h-full"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -171,8 +169,8 @@ const Skills = () => {
                 )}
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="card p-6 dark:bg-gray-700 mt-6 group hover:shadow-xl transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               initial={{ opacity: 0, y: 20 }}
@@ -184,11 +182,11 @@ const Skills = () => {
                 <Database className="mr-3 text-portfolio-accent" size={24} />
                 Key Frameworks & Tools
               </h3>
-              
+
               <div className="flex flex-wrap gap-2">
                 {frameworks.map((framework, index) => (
-                  <motion.span 
-                    key={index} 
+                  <motion.span
+                    key={index}
                     className="inline-block px-3 py-1 bg-portfolio-secondary dark:bg-gray-600 rounded-full text-sm text-portfolio-primary dark:text-white hover:bg-portfolio-accent hover:text-white dark:hover:bg-portfolio-accent cursor-pointer transition-all duration-300"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -203,8 +201,8 @@ const Skills = () => {
             </motion.div>
           </motion.div>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className="mt-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -215,11 +213,11 @@ const Skills = () => {
             <Zap className="mr-3 text-portfolio-accent" size={24} />
             Soft Skills
           </h3>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {softSkills.map((skill, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="card p-4 text-center dark:bg-gray-700 group hover:shadow-lg cursor-pointer border-2 border-transparent hover:border-portfolio-accent/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -227,7 +225,7 @@ const Skills = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 viewport={{ once: true }}
               >
-                <motion.span 
+                <motion.span
                   className="font-medium dark:text-white group-hover:text-portfolio-accent transition-colors"
                   whileHover={{ scale: 1.1 }}
                 >
