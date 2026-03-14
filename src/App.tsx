@@ -8,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ChatWidget } from "@/components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           </Routes>
         </BrowserRouter>
         <Analytics />
+        <ChatWidget />
       </TooltipProvider>
     </QueryClientProvider>
   </ThemeProvider>

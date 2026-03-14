@@ -1,0 +1,259 @@
+# Personal Knowledge Document
+
+## Subject: Tarun Kumar
+
+## Document Type: Professional Background & Profile Summary
+
+## Intended Use: Retrieval-Augmented Generation (RAG) Knowledge Base
+
+---
+
+# 1. Basic Professional Identity
+
+**Full Name:** Tarun Kumar
+**Current Role:** Data Scientist
+**Primary Expertise Areas:**
+
+* Optimization Algorithms
+* Machine Learning
+* Generative AI
+* Natural Language Processing
+* Computer Vision
+* MLOps
+* Applied Artificial Intelligence Systems
+
+---
+
+# 2. Current Employment
+
+## Organization: DHL Supply Chain
+
+**Designation:** Data Scientist
+**Start Date:** July 2025 – Present
+
+### Core Responsibilities:
+
+1. **Optimization Algorithm Development**
+
+   * Designing and implementing optimization algorithms for supply chain operations.
+   * Working on constraint-based modeling for real-world logistics systems.
+   * Improving operational efficiency through algorithmic solutions.
+
+2. **Machine Learning Systems**
+
+   * Developing predictive models for operational and business use cases.
+   * Building scalable ML pipelines for production environments.
+   * Handling model lifecycle management from experimentation to deployment.
+
+3. **Generative AI Applications**
+
+   * Designing and deploying GenAI-based applications.
+   * Developing AI-driven internal platforms.
+   * Integrating LLM-based solutions into business workflows.
+
+4. **MLOps**
+
+   * Designing model deployment workflows.
+   * Managing version control, model monitoring, and retraining pipelines.
+   * Ensuring scalability, stability, and maintainability of ML systems.
+   * Maintaining production-grade ML infrastructure.
+
+5. **Business & Stakeholder Interaction**
+
+   * Managing multiple sites and customer expectations.
+   * Translating technical outputs into business language.
+   * Explaining algorithm behavior, trade-offs, and limitations to stakeholders.
+   * Acting as a bridge between technical and operational teams.
+
+---
+
+# 3. Previous Industry Experience
+
+## Organization: Arkray (Japan-based Medical Diagnostic Equipment Manufacturer)
+
+**Role:** Intern
+**Domain:** Computer Vision / Medical Imaging
+
+### Work Description:
+
+* Worked on object detection models, primarily YOLO-based architectures.
+* Enhanced detection performance by integrating attention modules into YOLO layers.
+* Conducted architectural modifications to improve detection accuracy.
+* Applied deep learning techniques to medical/diagnostic equipment contexts.
+* Contributed to performance enhancement of production-grade vision systems.
+
+### Technical Exposure:
+
+* Deep understanding of CNN architectures.
+* Knowledge of object detection pipelines.
+* Model architecture experimentation and modification.
+* Practical computer vision implementation in industrial setting.
+
+---
+
+# 4. Academic Background
+
+## Institution: Indian Institute of Technology Guwahati
+
+**Program:** M.Tech in Data Science (2023–2025)
+**Academic Performance:** Ranked 1 in batch (Department Topper)
+
+## Institution: Indian Institute of Technology Bombay
+
+**Program:** PGDIIT (M.Tech 2022–23 Early Exit)
+
+---
+
+# 5. Research Work & Projects
+
+## A. NLP & LLM-Based Data Augmentation Research
+
+### Project Title:
+
+Optimizing Downstream NLP Tasks through Data Augmentation with LLMs
+
+### Research Focus:
+
+* Using Large Language Models for text augmentation.
+* Comparing LLM-based augmentation with traditional approaches such as Easy Data Augmentation and Self-Controlled Text Augmentation.
+* Conditioning LLMs by prepending label information.
+* Experimenting with Autoencoder, Autoregressive, and Seq2Seq pre-trained architectures.
+
+### Datasets Used:
+
+* SST-2
+* TREC
+* EMOTION
+* HumAID
+
+### Key Skills Demonstrated:
+
+* Transformer-based modeling
+* Fine-tuning large language models
+* Statistical analysis of performance metrics
+* Experimental research design
+* Comparative evaluation
+
+---
+
+## B. Medical Chatbot Project
+
+* Fine-tuned LLaMA 2 (7B) model.
+* Used LoRA and QLoRA techniques.
+* Worked with Hugging Face Transformers, PEFT, and TRL libraries.
+* Built domain-adapted conversational AI system.
+
+### Skills Demonstrated:
+
+* Parameter-efficient fine-tuning
+* LLM architecture understanding
+* Dataset preparation for instruction tuning
+* Memory and compute optimization strategies
+
+---
+
+## C. Industrial ML Project – Energy Load Prediction
+
+* Used electricity consumption data from an industrial firm.
+* Performed end-to-end data analysis.
+* Applied multiple ML models.
+* Conducted deep statistical coefficient analysis.
+* Tuned hyperparameters systematically.
+
+---
+
+# 6. Technical Expertise
+
+## A. Core Technical Areas
+
+1. Optimization Algorithms
+2. Machine Learning (Supervised & Unsupervised)
+3. Generative AI
+4. Natural Language Processing
+5. Computer Vision
+6. Large Language Models
+7. Model Architecture Design
+8. Statistical Modeling
+
+---
+
+## B. MLOps & Production Systems
+
+* Model deployment pipelines
+* Monitoring and retraining workflows
+* Version control for models
+* Scalable inference systems
+* Production reliability engineering for ML
+
+---
+
+## C. Programming & Tools
+
+* Python
+* PyTorch
+* Hugging Face Transformers
+* C++ (STL, data structures, algorithmic implementations)
+* Git
+* Cloud fundamentals (Azure basics)
+
+---
+
+# 7. Mathematical & Theoretical Foundation
+
+* Strong understanding of linear algebra
+* Probability and statistics
+* Optimization theory
+* Gradient-based learning
+* Model evaluation metrics
+* Bias-variance tradeoff
+* Architectural trade-offs in deep learning
+
+---
+
+# 8. Leadership & Organizational Experience
+
+## Associate Head – Peer Mentorship (Saathi Club), IIT Guwahati
+
+* Managed 1800+ mentees.
+* Led 230+ mentors.
+* Managed 13 core team members.
+* Designed structured feedback systems.
+* Conducted interviews for core team recruitment.
+* Oversaw mental wellness support systems.
+
+## Teaching Assistant – IIT Bombay
+
+* Conducted laboratory sessions.
+* Took viva examinations.
+* Evaluated assignments for 144+ students.
+
+## Event & Coordination Roles
+
+* Organizer at large-scale institutional events.
+* Department PG Representative.
+* Conducted interviews for departmental leadership roles.
+
+---
+
+# 9. Distinguishing Professional Traits
+
+1. Strong combination of research depth and production implementation.
+2. Ability to move from model design to deployment.
+3. Capability to handle stakeholder communication effectively.
+4. Strong business understanding alongside technical expertise.
+5. Experience across multiple domains:
+
+   * Logistics and supply chain
+   * Healthcare and medical devices
+   * NLP research
+   * Computer vision systems
+
+---
+
+# 10. Professional Positioning Summary
+
+Tarun Rajput is an industry Data Scientist with strong academic foundations from IIT institutions, specialized in optimization, machine learning, generative AI, and production MLOps systems. He combines deep theoretical understanding with practical system deployment experience and stakeholder management capability.
+
+He has experience across supply chain optimization, medical computer vision systems, NLP research, and large language model fine-tuning, making him a multidisciplinary applied AI professional capable of handling both technical complexity and business communication.
+
+    ---

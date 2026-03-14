@@ -1,0 +1,2 @@
+google-api= "AIzaSyDIZY1xyQzaWKAC9ZDWjQBBjzoiQzpsqTc"
+pinecone_api="pcsk_2KiMcy_6Er5J76ySbHunf1RTzP7dLThg6srWiLKLpmRwo2RvdUuDycWf4PjGsCt3skYdDR"
