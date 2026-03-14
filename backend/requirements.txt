@@ -6,3 +6,5 @@ langchain-google-genai
 langchain-pinecone
 pydantic
 python-dotenv
+langchain-community
+pypdf

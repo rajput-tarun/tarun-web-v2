@@ -10,7 +10,7 @@ interface Message {
     content: string;
 }
 
-const BACKEND_URL = "http://localhost:8000"; // Update this in production
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
 
 export const ChatWidget = () => {
     const [isOpen, setIsOpen] = useState(false);

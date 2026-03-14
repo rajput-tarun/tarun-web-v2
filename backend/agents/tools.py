@@ -60,14 +60,24 @@ def retrieve_portfolio(query: str) -> str:
         return "System memory (Pinecone) is Currently Unavailable. I will answer based on my general knowledge of Tarun."
         
     try:
-        from langchain_google_genai import GoogleGenerativeAIEmbeddings
-        embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001") # Adjusted to match a typical model, update if needed
-        # Pinecone uses a different dimension generally if not 768.
-        # User explicitly mentioned: Embedding Model: llama-text-embed-v2, Dimension: 1024
-        # Since we are using langchain-google-genai, we must be careful. If user created the pinecone index with llama-text-embed-v2, 
-        # we realistically need that embedding model here. 
-        # For this prototype, I will return a placeholder or attempt a basic matching response if embeddings are unavailable.
-        return f"Simulated RAG Retrieval for: {query}\nFound relevant documents in index."
+        from langchain_pinecone import PineconeVectorStore, PineconeEmbeddings
+        
+        embeddings = PineconeEmbeddings(
+            model="llama-text-embed-v2",
+            pinecone_api_key=pinecone_api_key
+        )
+        vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings, pinecone_api_key=pinecone_api_key)
+        
+        # Retrieve top 3 chunks
+        docs = vectorstore.similarity_search(query, k=3)
+        
+        if not docs:
+            return "Could not find specific details in the portfolio documents. Please answer based on general knowledge."
+            
+        # Compile retrieved info
+        retrieved_info = "\n\n---\n\n".join([doc.page_content for doc in docs])
+        return f"Retrieved Context for '{query}':\n{retrieved_info}"
+        
     except Exception as e:
         return f"Error retrieving from portfolio: {str(e)}"
 

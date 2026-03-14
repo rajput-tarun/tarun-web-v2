@@ -37,21 +37,10 @@ def router_node(state: ChatState):
 
 def get_agent_response(state: ChatState, system_prompt: str):
     messages = state["messages"]
-    sys_msg = {"role": "system", "content": system_prompt}
     
-    # Langchain message formatting handling - prepend system prompt logically
-    # Since we can't easily prepend SystemMessage to existing conversation history in memory cleanly every time
-    # without duplication, we pass it dynamically to LLM.
-    
-    formatted_messages = []
-    # Gemini might need specific conversion handling depending on the version
-    try:
-        from langchain_core.messages import SystemMessage
-        formatted_messages.append(SystemMessage(content=system_prompt))
-    except:
-        pass
-        
-    formatted_messages.extend(messages)
+    # Prepend the system prompt elegantly
+    from langchain_core.messages import SystemMessage
+    formatted_messages = [SystemMessage(content=system_prompt)] + messages
     
     response = llm_with_tools.invoke(formatted_messages)
     return {"messages": [response]}

@@ -1,20 +1,12 @@
-import requests
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
 
-if __name__ == "__main__":
-    url = "http://localhost:8000/chat"
-    payload = {
-        "messages": [
-            {
-                "role": "user",
-                "content": "Hi I am a recruiter. Can you analyze this JD: We need someone expert in python, machine learning and MLOps to deploy models. And tell me if Tarun is a match."
-            }
-        ],
-        "session_id": "test-session-1"
-    }
-    
-    response = requests.post(url, json=payload)
-    print("Status:", response.status_code)
-    try:
-        print("Response:", response.json())
-    except:
-        print("Raw:", response.text)
+load_dotenv()
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+models = genai.list_models()
+for m in models:
+    if 'embedContent' in m.supported_generation_methods:
+        print(m.name)
